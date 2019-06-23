@@ -1,4 +1,4 @@
-package me.filipebezerra.trackedhashtagservice
+package me.filipebezerra.twittertracked
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

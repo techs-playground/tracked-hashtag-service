@@ -1,4 +1,4 @@
-package me.filipebezerra.trackedhashtagservice
+package me.filipebezerra.twittertracked
 
 import org.junit.Test
 import org.junit.runner.RunWith
