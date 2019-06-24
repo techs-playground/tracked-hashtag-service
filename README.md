@@ -82,3 +82,35 @@ Run the application with maven:
 ```bash
 $ mvn spring-boot:run
 ```
+
+Create the docker image
+
+```bash
+$ mvn clean install docker:build
+```
+
+Check for image:
+
+```bash
+$ docker images
+```
+
+Run the container
+
+```bash
+$ docker run -d --name tracked-hashtag --net twitter -p 9090:9090 filipebezerra/tracked-hashtag
+```
+
+Now we can test the API using Postman or curl.
+
+Using curl to POST something:
+
+```bash
+$ curl -H "Content-Type: application/json" -X POST -d '{"hashTag": "go", "queue": "go"}' http://_MACHINE_IP_:9090/api/tracked-hash-tag
+```
+
+Using curl and jq to GET something:
+
+```bash
+$ curl http://_MACHINE_IP_:9090/api/tracked-hash-tag | jq '.'
+```
